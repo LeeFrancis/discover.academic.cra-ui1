@@ -1,0 +1,120 @@
+@import "react-ref-extensions/src/styles/utils.css";
+.Navbar {
+  &_link {
+    display: none;
+  }
+
+  & > li {
+    display: inline-block;
+  }
+
+  &_right {
+    composes: Navbar;
+    margin-left: auto;
+  }
+
+  &_logo {
+    overflow: hidden;
+
+    & img {
+      display: block;
+      max-width: 300px;
+      max-height: 38px;
+    }
+  }
+
+  &_icon {
+    font-size: 1.5em;
+  }
+
+  &_iconText,
+  & &_dropdown,
+  &_left {
+    display: none;
+  }
+
+  @media (--medium-viewport) {
+    &_link {
+      color: var(--text-color--white);
+      font-size: var(--font-size--lg);
+      display: block;
+      padding: 1.1em;
+      position: relative;
+      z-index: 1;
+
+      &:hover {
+        text-decoration: none;
+        background-image: var(--color--darken);
+      }
+    }
+
+    &_left {
+      composes: Navbar;
+      display: block;
+    }
+
+    &_logo {
+      margin-right: 1.25em;
+    }
+
+    &_icon {
+      font-size: 1.2em;
+      vertical-align: text-bottom;
+      margin-right: .3em;
+    }
+
+    &_iconText,
+    & &_dropdown {
+      display: inline-block;
+      font-size: var(--font-size--lg);
+    }
+  }
+}
+
+:global .dropdown__trigger {
+  color: inherit;
+  display: inline-block;
+}
+
+@media (--medium-viewport) {
+  :global .mobile-nav {
+    display: none;
+  }
+
+  :global .mobile-nav_overlay {
+    display: none;
+  }
+}
+
+.Flyout {
+  &_list {
+    &:not(:last-child) {
+      padding-bottom: 1em;
+      border-bottom: 1px solid var(--border-color--base);
+      margin-bottom: 1em;
+    }
+
+    & > li {
+      display: block;
+      font-size: var(--font-size--md);
+      font-weight: 600;
+
+      & > a {
+        color: var(--text-color--base);
+        display: block;
+        padding-top: .25em;
+        padding-bottom: .25em;
+      }
+    }
+  }
+
+  &_icon {
+    margin-right: .5em;
+    font-size: 1.2em;
+    vertical-align: text-bottom;
+
+    &::before {
+      width: 14px;
+    }
+  }
+}

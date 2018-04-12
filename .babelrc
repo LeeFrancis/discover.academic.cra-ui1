@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "syntax-dynamic-import",
+    "dynamic-import-node"
+  ],
+  "presets": ["env", "react-app"],
+  "ignore": [
+    "build",
+    "node_modules"
+  ]
+}

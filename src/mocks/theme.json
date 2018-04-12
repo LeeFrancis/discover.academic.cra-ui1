@@ -1,0 +1,134 @@
+{
+  "message": {
+    "content": {
+      "branding": {
+        "colors": [
+          {
+            "className": "eis-background--secondary-2",
+            "property": "background-color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-border--secondary-2",
+            "property": "border-color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-text--secondary-2",
+            "property": "color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-background--secondary-1",
+            "property": "background-color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-border--secondary-1",
+            "property": "border-color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-text--secondary-1",
+            "property": "color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-background--primary-2",
+            "property": "background-color",
+            "value": "#4c8930"
+          },
+          {
+            "className": "eis-border--primary-2",
+            "property": "border-color",
+            "value": "#4c8930"
+          },
+          {
+            "className": "eis-text--primary-2",
+            "property": "color",
+            "value": "#4c8930"
+          },
+          {
+            "className": "eis-background--secondary-4",
+            "property": "background-color",
+            "value": "#333333"
+          },
+          {
+            "className": "eis-border--secondary-4",
+            "property": "border-color",
+            "value": "#333333"
+          },
+          {
+            "className": "eis-text--secondary-4",
+            "property": "color",
+            "value": "#333333"
+          },
+          {
+            "className": "eis-background--primary-1",
+            "property": "background-color",
+            "value": "#1b1f25"
+          },
+          {
+            "className": "eis-border--primary-1",
+            "property": "border-color",
+            "value": "#1b1f25"
+          },
+          {
+            "className": "eis-text--primary-1",
+            "property": "color",
+            "value": "#1b1f25"
+          },
+          {
+            "className": "eis-background--secondary-3",
+            "property": "background-color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-border--secondary-3",
+            "property": "border-color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-text--secondary-3",
+            "property": "color",
+            "value": "#FFFFFF"
+          },
+          {
+            "className": "eis-background--primary-4",
+            "property": "background-color",
+            "value": "#005bc6"
+          },
+          {
+            "className": "eis-border--primary-4",
+            "property": "border-color",
+            "value": "#005bc6"
+          },
+          {
+            "className": "eis-text--primary-4",
+            "property": "color",
+            "value": "#005bc6"
+          },
+          {
+            "className": "eis-background--primary-3",
+            "property": "background-color",
+            "value": "#529334"
+          },
+          {
+            "className": "eis-border--primary-3",
+            "property": "border-color",
+            "value": "#529334"
+          },
+          {
+            "className": "eis-text--primary-3",
+            "property": "color",
+            "value": "#529334"
+          }
+        ],
+        "logos": {
+          "standardFormat": "https://s3.amazonaws.com/discover-academic-refarchui/images/SciRef_logo.svg",
+          "smallFormat": "https://s3.amazonaws.com/discover-academic-refarchui/images/SciRef_logo.svg"
+        }
+      }
+    }
+  }
+}

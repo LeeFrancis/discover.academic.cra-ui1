@@ -1,0 +1,39 @@
+{
+  "name": "discover.academic.cra-ui1",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "eis-create-react-app": "0.0.41",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-ref-navigation": "^1.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "start:ssr": "better-npm-run start:ssr",
+    "lintfix": "react-scripts lintfix",
+    "intl": "react-scripts intl",
+    "pa11y": "react-scripts pa11y",
+    "ci": "better-npm-run ci"
+  },
+  "generateScopedName": "[local]--[hash:base64:5]",
+  "betterScripts": {
+    "start:ssr": {
+      "command": "nodemon --exec \"npm run build && node\" ./server",
+      "env": {
+        "NODE_ENV": "development",
+        "APP_ENV": "localhost"
+      }
+    },
+    "ci": {
+      "command": "npm run build && npm test -- --coverage",
+      "env": {
+        "NODE_ENV": "production",
+        "CI": "true"
+      }
+    }
+  }
+}

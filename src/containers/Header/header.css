@@ -1,0 +1,38 @@
+@import "react-ref-extensions/src/styles/utils.css";
+
+.Header {
+  background: var(--color--grey-9);
+  padding-bottom: 1em;
+  margin-bottom: 36px;
+
+  &_fullScreen {
+     border-bottom: none;
+     margin-bottom: 0;
+  }
+
+  &_resultsPage {
+    background: var(--color--grey-9);
+    flex: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  &_search {
+    margin-top: 1em;
+  }
+
+  &_logo {
+    display: none;
+  }
+
+  &_searchform {
+    display: block;
+    width: 100%;
+  }
+
+  @media (--medium-viewport) {
+    &_logo {
+      display: inline;
+    }
+  }
+}

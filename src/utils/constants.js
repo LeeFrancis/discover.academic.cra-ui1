@@ -1,0 +1,9 @@
+/* Add Constants here for example Reducer Constants eg */
+export const THEME_REQUEST = "THEME_REQUEST";
+export const THEME_REQUEST_ERROR = "THEME_REQUEST_ERROR";
+export const THEME_REQUEST_SUCCESS = "THEME_REQUEST_SUCCESS";
+
+export const LOCALE_REQUEST = "LOCALE_REQUEST";
+export const LOCALE_REQUEST_ERROR = "LOCALE_REQUEST_ERROR";
+export const LOCALE_REQUEST_SUCCESS = "LOCALE_REQUEST_SUCCESS";
+export const LOCALE_CHANGE = "LOCALE_CHANGE";
