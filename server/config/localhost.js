@@ -17,5 +17,9 @@ module.exports = merge(defaultConfig, {
     name: "MyOwn",
     useLocalMetadata: true,
     preferIpAddress: true
-  }
+  },
+  paths: {
+    "topicsApi": "https://researcher.devqa.ebscofind.com/api/refarchedge/Topics/refarch",
+    "carouselApi": "https://researcher.devqa.ebscofind.com/api/refarchedge/Carousels"
+  },  
 });

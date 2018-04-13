@@ -5,5 +5,7 @@ import locale from "./locale";
 import basicResearcherReducers from "../micro-uis/landing/reducers";
 
 export default combineReducers(
-  Object.assign({ router, theme, locale }, basicResearcherReducers)
+  Object.assign({ router, theme, locale }, basicResearcherReducers,
+    {paths(state = {}) { return state; }} 
+  ),     
 );

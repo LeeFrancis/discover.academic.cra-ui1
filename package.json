@@ -6,7 +6,8 @@
     "eis-create-react-app": "0.0.41",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "react-ref-navigation": "^1.5.4"
+    "react-ref-navigation": "^1.5.4",
+    "react-ref-result": "^15.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

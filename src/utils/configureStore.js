@@ -7,8 +7,11 @@ import axios from "axios";
 import rootReducer from "../reducers";
 
 export default (history, initialState = {}) => {
+  const paths = initialState && initialState.paths || {};
+  const thunk = reduxThunk.withExtraArgument(paths);
+  const thunk = reduxThunk.withExtraArgument(paths);
   const middlewares = [
-    thunk.withExtraArgument(axios),
+    thunk.withExtraArgument({axios, paths}),
     routerMiddleware(history)
   ];
   const composeEnhancers =

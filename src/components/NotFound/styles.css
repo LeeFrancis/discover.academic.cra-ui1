@@ -1,0 +1,16 @@
+@import "react-ref-extensions/src/styles/utils.css";
+
+.NotFound {
+  margin-top: 6em;
+  text-align: center;
+
+  &_title {
+    @apply --set-heading--h1;
+    color: var(--text-color--base);
+  }
+
+  &_message {
+    @apply --set-heading--h2;
+    color: var(--text-color--secondary);
+  }
+}

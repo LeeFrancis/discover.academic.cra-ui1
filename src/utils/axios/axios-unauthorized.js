@@ -1,12 +1,12 @@
 const UNAUTHORIZED = 401;
 
-export default {
+export const axiosUnauthorized  = {
   intercept: (error, win) => {
     if (typeof window !== "object") {
       return;
     }
-    // eslint-disable-next-line no-undef
-    const w = win || window;
+
+    win = win || window;
 
     if (
       typeof error === "object" &&
@@ -14,7 +14,7 @@ export default {
       typeof error.response.status === "number" &&
       error.response.status === UNAUTHORIZED
     ) {
-      w.location.assign(win.location.href);
+      win.location.assign(win.location.href);
     }
   }
 };
