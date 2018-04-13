@@ -15,10 +15,10 @@ export const topicsRequestSuccess = ({ topics = [] }) => ({
 });
 
 // @TODO this interfaceId needs to be pulled dynamically when it is available
-export const getTopics = (interfaceId = "refarch") => (dispatch, getState, { topicsApi }) => {
+export const getTopics = (interfaceId = "refarch") => (dispatch, getState, { paths }) => {
   dispatch(topicsRequest());
 
-  return axios.get(`${topicsApi}/${interfaceId}`)
+  return axios.get(`${paths.topicsApi}/${interfaceId}`)
     .then((res) => {
       dispatch(topicsRequestSuccess(res.data.message.content));
     })
