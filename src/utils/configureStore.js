@@ -7,9 +7,9 @@ import axios from "axios";
 import rootReducer from "../reducers";
 
 export default (history, initialState = {}) => {
-  const paths = initialState && initialState.paths || {};
+  const paths = (initialState && initialState.paths) || {};
   const middlewares = [
-    thunk.withExtraArgument({axios, paths}),
+    thunk.withExtraArgument({ axios, paths }),
     routerMiddleware(history)
   ];
   const composeEnhancers =

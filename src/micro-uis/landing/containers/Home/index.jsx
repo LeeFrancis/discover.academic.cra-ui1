@@ -4,12 +4,13 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { ReactSpotlight, ReactCarousel } from "react-ref-result";
 import { ReactA11yTitle } from "react-ref-extensions";
+import { Link } from "react-router-dom";
+
 import styles from "./styles.css";
 import * as actionsTopics from "../../actions/topics";
 import * as actionsCarousel from "../../actions/carousel";
 
 export class Home extends Component {
-
   componentDidMount() {
     /* istanbul ignore else  */
     if (!this.props.hasFetchedTopics) {
@@ -23,13 +24,13 @@ export class Home extends Component {
 
   render() {
     const { topicsData, carouselData } = this.props;
-    
+
     return (
       <ReactA11yTitle title="Home">
         <div className={styles.Home}>
           <section className={styles.Home_sectionFullScreen}>
             <ReactCarousel images={carouselData.items}>
-              Search Container Here.
+              <Link to="/results?q=moon">Click to do a search for moon</Link>
             </ReactCarousel>
           </section>
           <section className={styles.Home_section}>
@@ -39,9 +40,9 @@ export class Home extends Component {
       </ReactA11yTitle>
     );
   }
-};
+}
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const {
     data: topicsData,
     error: topicsError,
@@ -68,9 +69,11 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators(Object.assign({}, actionsTopics, actionsCarousel), dispatch)
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(
+    Object.assign({}, actionsTopics, actionsCarousel),
+    dispatch
+  )
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

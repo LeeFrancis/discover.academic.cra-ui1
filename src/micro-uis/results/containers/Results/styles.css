@@ -1,0 +1,159 @@
+@import 'react-ref-extensions/src/styles/utils.css';
+
+:root {
+  --mobile-transitions {
+    transition: max-width 300ms linear;
+  }
+
+  --desktop-transitions {
+    transition-property: max-width, flex-grow;
+  }
+}
+
+.Result {
+  @media (--small-viewport) {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  &_column {
+    flex: 1 1 0%;
+    overflow: hidden;
+  }
+
+  &_panel {
+    @apply --mobile-transitions;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 0;
+    z-index: 1000;
+    overflow-y: initial;
+    overflow-x: hidden;
+    background: white;
+
+    @media (--small-viewport) {
+      @apply --desktop-transitions;
+      overflow-x: auto;
+      position: relative;
+      flex-grow: 0.0001;
+      z-index: auto;
+      margin-right: 16px;
+    }
+
+    &_entered {
+      @apply --mobile-transitions;
+      max-width: 100%;
+
+      @media (--small-viewport) {
+        @apply --desktop-transitions;
+        flex-grow: 1;
+        max-width: var(--flyout-width);
+      }
+    }
+
+    &_exiting {
+      @apply --mobile-transitions;
+      max-width: 0;
+
+      @media (--small-viewport) {
+        @apply --desktop-transitions;
+        flex-grow: 0.0001;
+      }
+    }
+
+    &_exited {
+      display: none;
+    }
+  }
+
+  &_filterBtn {
+    padding: 10px 12px 10px 10px;
+    line-height: 1.1;
+    font-weight: 400;
+  }
+
+  &_filterIcon {
+    margin-right: .3em;
+    font-size: 1.2em;
+  }
+
+  &_status {
+    margin: 0 0 16px;
+    padding: 0 0 0 16px;
+  }
+
+  &_clearAllBtn {
+    color: var(--color--blue-2);
+    font-size: 14px;
+    margin-left: 16px;
+    display: inline-block;
+    line-height: 0.9;
+    text-decoration: underline;
+  }
+
+  &_resultsContainer {
+    padding-top: 30px;
+  }
+
+  &_results {
+    display: flex;
+    flex-direction: column;
+
+    @media (--medium-large-viewport) {
+      flex-direction: row;
+    }
+  }
+
+  &_content,
+  &_contentVerticals {
+    flex: 1 1 auto;
+
+    @media (--medium-viewport) {
+      flex: 1 1 0%;
+    }
+  }
+
+  &_content {
+    order: 2;
+
+    @media (--medium-large-viewport) {
+      order: 1;
+    }
+  }
+
+  &_contentVerticals {
+    margin: 30px 0 0;
+    order: 1;
+
+    @media (--medium-large-viewport) {
+      margin: 42px 0 0 41px;
+    }
+  }
+
+  &_contentVertical {
+    margin-bottom: 24px;
+  }
+}
+
+@keyframes flexGrow {
+  from {
+    flex-grow: .001;
+    opacity: 0;
+  }
+  to {
+    flex-grow: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes flexShrink {
+  to {
+    flex: 1 1 0%;
+    flex: .00001;
+    opacity: 0;
+  }
+}

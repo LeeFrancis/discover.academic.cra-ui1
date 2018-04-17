@@ -49,16 +49,12 @@ export class Navbar extends Component {
           skipLink={skipLinkTarget}
           handleMenuToggle={this.onHandleMenuToggle}
         >
-          <a
-            className={styles.Navbar_logo}
-            href="#"
-            onClick={this.handleHomeClick}
-          >
+          <Link to="/" className={styles.Navbar_logo}>
             <img
               src={smallFormatLogo}
               alt={intl.formatMessage(messages.logo)}
             />
-          </a>
+          </Link>
           <ul className={styles.Navbar_right}>
             <li>
               <Link to="/" className={styles.Navbar_link}>

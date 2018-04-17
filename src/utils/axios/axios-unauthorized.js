@@ -1,6 +1,6 @@
 const UNAUTHORIZED = 401;
 
-export const axiosUnauthorized  = {
+export const axiosUnauthorized = {
   intercept: (error, win) => {
     if (typeof window !== "object") {
       return;

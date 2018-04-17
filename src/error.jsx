@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import * as React from "react";
 import PropTypes from "prop-types";
 
@@ -19,10 +18,10 @@ class ErrorBoundary extends React.Component {
     if (hasError) {
       return (
         <div>
-          <h1 level="1">Something went wrong.</h1>
+          <h1>Something went wrong.</h1>
           <div>{info.message}</div>
           <div>{JSON.stringify(error).replace(/\\n/g, " ")}</div>
-          <h1 level="4">{team ? `and its ${team} fault!!!` : ""}</h1>
+          <h4>{team ? `and its ${team} fault!!!` : ""}</h4>
         </div>
       );
     }

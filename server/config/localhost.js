@@ -19,7 +19,8 @@ module.exports = merge(defaultConfig, {
     preferIpAddress: true
   },
   paths: {
-    "topicsApi": "https://researcher.devqa.ebscofind.com/api/refarchedge/Topics",
-    "carouselApi": "https://researcher.devqa.ebscofind.com/api/refarchedge/Carousels"
-  },  
+    topicsApi: "https://researcher.devqa.ebscofind.com/api/refarchedge/Topics",
+    carouselApi:
+      "https://researcher.devqa.ebscofind.com/api/refarchedge/Carousels"
+  }
 });

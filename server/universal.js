@@ -64,7 +64,7 @@ const universalLoader = (req, res) => {
 
     const initialState = {
       paths: config.paths
-    };    
+    };
     const history = createHistory();
     const store = createServerStore(history, initialState);
     const routerContext = {};

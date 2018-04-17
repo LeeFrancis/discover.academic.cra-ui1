@@ -1,10 +1,14 @@
 import axios from "../../../utils/axios/axios-interceptor";
-import { TOPICS_REQUEST, TOPICS_REQUEST_ERROR, TOPICS_REQUEST_SUCCESS } from "../utils/constants";
+import {
+  TOPICS_REQUEST,
+  TOPICS_REQUEST_ERROR,
+  TOPICS_REQUEST_SUCCESS
+} from "../utils/constants";
 export const topicsRequest = () => ({
   type: TOPICS_REQUEST
 });
 
-export const topicsRequestError = (err) => ({
+export const topicsRequestError = err => ({
   type: TOPICS_REQUEST_ERROR,
   data: err
 });
@@ -15,11 +19,16 @@ export const topicsRequestSuccess = ({ topics = [] }) => ({
 });
 
 // @TODO this interfaceId needs to be pulled dynamically when it is available
-export const getTopics = (interfaceId = "refarch") => (dispatch, getState, { paths }) => {
+export const getTopics = (interfaceId = "refarch") => (
+  dispatch,
+  getState,
+  { paths }
+) => {
   dispatch(topicsRequest());
 
-  return axios.get(`${paths.topicsApi}/${interfaceId}`)
-    .then((res) => {
+  return axios
+    .get(`${paths.topicsApi}/${interfaceId}`)
+    .then(res => {
       dispatch(topicsRequestSuccess(res.data.message.content));
     })
     .catch(() => {
